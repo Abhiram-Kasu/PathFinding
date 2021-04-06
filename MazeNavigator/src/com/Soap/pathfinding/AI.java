@@ -42,6 +42,16 @@ public class AI {
 					i++;
 
 				}
+				// if can move left, then move left
+				else if (maze[y][x - 1] != 1  && maze[y][x - 1] != 3 ) {
+					maze[y][x] = 3;
+					x -= 1;
+					y += 0;
+
+					System.out.println("left");
+					i++;
+					extrad++;
+				}
 				// if can move up, then move up
 				else if (maze[y - 1][x] != 1  && maze[y - 1][x] != 3 ) {
 					maze[y][x] = 3;
@@ -54,16 +64,7 @@ public class AI {
 				}
 				
 				
-				// if can move left, then move left
-				else if (maze[y][x - 1] != 1  && maze[y][x - 1] != 3 ) {
-					maze[y][x] = 3;
-					x -= 1;
-					y += 0;
-
-					System.out.println("left");
-					i++;
-					extrad++;
-				}
+				
 				// if can move right move right
 				if (maze[y][x + 1] != 1  && maze[y][x + 1] != 3) {
 
@@ -86,6 +87,16 @@ public class AI {
 					System.out.println("down");
 					i++;
 				}
+				// if can move left, then move left
+				else if (maze[y][x - 1] != 1  && maze[y][x - 1] != 3 ) {
+					maze[y][x] = 3;
+					x -= 1;
+					y += 0;
+
+					System.out.println("left");
+					i++;
+					extrad++;
+				}
 				// if can move up, then move up
 				else if (maze[y - 1][x] != 1  && maze[y - 1][x] != 3 ) {
 					maze[y][x] = 3;
@@ -100,15 +111,9 @@ public class AI {
 				
 				
 
-				// if can move left, then move left
-				else if (maze[y][x - 1] != 1  && maze[y][x - 1] != 3 ) {
-					maze[y][x] = 3;
-					x -= 1;
-					y += 0;
-
-					System.out.println("left");
-					i++;
-					extrad++;
+				
+				else {
+					break;
 				}
 				
 				
